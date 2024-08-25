@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  web:
+    build: 
+      context: ./web
+      dockerfile: Dockerfile.dockerfile
+    ports:
+      - "8008:8008"
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=root99
+      - DATABASE_NAME=apapp
+    depends_on:
+      - db
+    networks:
+      - embed242a1
+
+  db:
+    image: mysql:8.1
+    environment:
+      MYSQL_ROOT_PASSWORD: root99
+      MYSQL_DATABASE: apapp
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./db/apapp_dump.sql:/docker-entrypoint-initdb.d/apapp_dump.sql
+    networks:
+      - embed242a1
+networks:
+  embed242a1:
+    driver: bridge
