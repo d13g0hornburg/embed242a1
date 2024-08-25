@@ -19,4 +19,4 @@ RUN wget https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for
 EXPOSE 8008
 
 # Comando para iniciar a aplicação, aguardando o MySQL estar pronto
-CMD ["./wait-for-it.sh", "db:3306", "--", "node", "script.js"]
+CMD ["./wait-for-it.sh", "db:3306", "--timeout=60", "--", "node", "script.js"]
