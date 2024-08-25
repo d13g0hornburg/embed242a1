@@ -41,7 +41,7 @@ Caso não digitar  as credenciais válidas o navegador deverá mostrar **"Creden
 
 <details><summary><h2>Configurações Dockerfile e Compose</h2></summary>
 
-<details><summary><h3>Dockerfile.dockerfile</h3></summary>
+<details><summary><h2>Dockerfile.dockerfile</h2></summary>
 
 ```sh
 # Usar uma imagem Node.js como base
@@ -68,7 +68,7 @@ CMD ["./wait-for-it.sh", "db:3306", "--timeout=60", "--", "node", "script.js"]
 ```
 </details>
 
-<details><summary><h3>docker-compose.yml</h3></summary>
+<details><summary><h2>docker-compose.yml</h2></summary>
 
 ```sh
 version: '3.8'  # Define a versão do Compose a ser usada.
