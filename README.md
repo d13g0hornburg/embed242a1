@@ -12,6 +12,7 @@ Para subir o container Docker com um serviço web Node.js e MySQL, vamos usar o 
 
 ![Estrutura de pastas e arquivos](https://i.imgur.com/L4sQGzz.jpeg)
 
+
 2) No Visual Code abra a pasta descompactada, se não for renomeada estará com o nome **embed242a1-master**
 ![Estrutura de pastas e arquivos no VS](https://i.imgur.com/lj6CyxL.jpeg)
 
